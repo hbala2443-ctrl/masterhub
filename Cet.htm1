@@ -37,9 +37,9 @@ font-weight:bold;
 </head>
 <body>
 
-<header>CET Graduation</header>
-
-<div class="container">
+<a href="cet.html" style="text-decoration:none;color:black;">
+  <div class="card">📘 CET Graduation</div>
+</a>
 
 <div class="card">
 📖 History
