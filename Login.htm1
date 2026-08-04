@@ -3,7 +3,7 @@
 <head>
 <title>Login - MasterHub</title>
 <style>
-body{
+>body{
 font-family:Arial;
 background:#f4f7fb;
 display:flex;
@@ -35,7 +35,7 @@ border:none;
 }
 </style>
 </head>
-
+<script type="module" src="js/login.js"></script
 <body>
 
 <div class="box">
