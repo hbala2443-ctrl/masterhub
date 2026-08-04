@@ -41,7 +41,12 @@ font-size:18px;
 <body>
 
 <div class="box">
+<div class="d-flex justify-content-between mb-3">
+    <h5>⏱️ Time Left: <span id="timer">20:00</span></h5>
+    <h5>Question <span id="qno">1</span>/20</h5>
+</div>
 
+<div id="palette" class="mb-3"></div>
 <h2>Question 1</h2>
 
 <p>भारत का संविधान कब लागू हुआ?</p>
@@ -60,7 +65,24 @@ font-size:18px;
 
 </div>
 
-<script>
+<script>let time = 20 * 60;
+
+setInterval(() => {
+
+let min = Math.floor(time / 60);
+let sec = time % 60;
+
+document.getElementById("timer").innerHTML =
+`${min}:${sec.toString().padStart(2,"0")}`;
+
+if(time <= 0){
+alert("Time Over");
+window.location = "result.html";
+}
+
+time--;
+
+},1000);
 
 function checkAnswer(){
 
