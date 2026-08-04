@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MasterHub Test</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f4f7fb;
+padding:20px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 10px #ccc;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+#result{
+margin-top:15px;
+font-weight:bold;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Question 1</h2>
+
+<p>भारत का संविधान कब लागू हुआ?</p>
+
+<input type="radio" name="q" value="A">15 अगस्त 1947<br><br>
+
+<input type="radio" name="q" value="B">26 जनवरी 1950<br><br>
+
+<input type="radio" name="q" value="C">26 नवम्बर 1949<br><br>
+
+<input type="radio" name="q" value="D">2 अक्टूबर 1950<br><br>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function checkAnswer(){
+
+let ans=document.querySelector('input[name=q]:checked');
+
+if(!ans){
+alert("पहले उत्तर चुनो");
+return;
+}
+
+if(ans.value=="B"){
+
+document.getElementById("result").innerHTML="✅ सही उत्तर";
+
+}else{
+
+document.getElementById("result").innerHTML="❌ गलत उत्तर";
+
+}
+
+}
+
+</script>
+
+</body>
+  </html>
