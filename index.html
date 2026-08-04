@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,58 +9,122 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f4f6f9;
-text-align:center;
+background:#f4f7fb;
 }
 
 header{
-background:#2563eb;
+background:#0d6efd;
 color:white;
-padding:20px;
-font-size:30px;
+padding:18px;
+text-align:center;
+font-size:28px;
 font-weight:bold;
+}
+
+.hero{
+padding:25px;
+text-align:center;
+}
+
+.hero h1{
+margin:0;
+font-size:32px;
+}
+
+.hero p{
+color:#666;
+}
+
+.search{
+margin:20px;
+text-align:center;
+}
+
+.search input{
+width:90%;
+max-width:500px;
+padding:14px;
+border-radius:30px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+padding:20px;
 }
 
 .card{
 background:white;
-margin:20px;
 padding:20px;
 border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+cursor:pointer;
+transition:.3s;
 }
 
-button{
-width:90%;
-padding:15px;
-margin:10px;
-font-size:18px;
-border:none;
-border-radius:10px;
-background:#2563eb;
+.card:hover{
+transform:scale(1.05);
+}
+
+footer{
+background:#0d6efd;
 color:white;
+padding:15px;
+text-align:center;
+margin-top:20px;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-MasterHub
-</header>
+<header>MasterHub</header>
 
-<div class="card">
-<h2>Welcome to MasterHub</h2>
-<p>India's Best Competition Exam Platform</p>
+<div class="hero">
+<h1>India's Smart Exam Platform</h1>
+<p>Practice • Learn • Success</p>
+</div>
 
-<button>CET Graduation</button>
+<div class="search">
+<input type="text" placeholder="Search Exam...">
+</div>
 
-<button>CET 12th</button>
+<div class="grid">
 
-<button>Daily Quiz</button>
+<div class="card">📘 CET Graduation</div>
 
-<button>Mock Test</button>
+<div class="card">🎓 CET 12th</div>
+
+<div class="card">👨‍🏫 REET</div>
+
+<div class="card">👮 Police</div>
+
+<div class="card">📝 Patwari</div>
+
+<div class="card">💼 LDC</div>
+
+<div class="card">📚 SSC</div>
+
+<div class="card">🚆 Railway</div>
+
+<div class="card">🏦 Banking</div>
+
+<div class="card">🌍 UPSC</div>
+
+<div class="card">📅 Daily Quiz</div>
+
+<div class="card">🏆 Mock Test</div>
 
 </div>
 
+<footer>
+© 2026 MasterHub | Made by Yogesh
+</footer>
+
 </body>
-                  </html>
+  </html>
