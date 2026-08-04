@@ -41,9 +41,11 @@ font-weight:bold;
   <div class="card">📘 CET Graduation</div>
 </a>
 
+<a href="test.html" style="text-decoration:none;color:black;">
 <div class="card">
 📖 History
 </div>
+</a>
 
 <div class="card">
 🌍 Geography
