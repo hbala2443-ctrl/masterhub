@@ -1,13 +1,17 @@
-masterhub/
-│── index.html
-│── exams.html
-│── login.html
-│── dashboard.html
-│── result.html
-│
-├── assets/
-│   ├── css/
-│   │      style.css
-│   ├── js/
-│   │      app.js
-│   └── images/
+body{
+background:#f5f7fb;
+font-family:Arial,sans-serif;
+}
+
+.navbar-brand{
+font-size:28px;
+}
+
+h1{
+color:#0d6efd;
+}
+
+input{
+max-width:600px;
+margin:auto;
+}
