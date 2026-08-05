@@ -55,3 +55,23 @@ footer h3,
 footer h5{
 font-weight:bold;
 }
+.btn{
+border-radius:12px;
+}
+
+.card{
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+section{
+padding-top:60px;
+padding-bottom:60px;
+}
+
+h2{
+font-weight:bold;
+}
