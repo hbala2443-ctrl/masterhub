@@ -1,72 +1,254 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Result - MasterHub</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="assets/css/style.css">
 
 <style>
-body{
-background:#f4f7fb;
-font-family:Arial,sans-serif;
+
+.result-page{
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 15px;
 }
+
 .result-card{
-max-width:700px;
-margin:40px auto;
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,.1);
+background:white;
+width:100%;
+max-width:600px;
+padding:40px 25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 35px rgba(0,0,0,.12);
 }
-.score{
-font-size:50px;
-font-weight:bold;
+
+.score-circle{
+width:150px;
+height:150px;
+border-radius:50%;
+background:#eaf2ff;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+margin:25px auto;
+}
+
+.score-circle h1{
 color:#0d6efd;
+font-weight:800;
+margin:0;
 }
+
+.result-stat{
+background:#f8f9fa;
+padding:15px;
+border-radius:12px;
+margin-bottom:10px;
+}
+
 </style>
 
 </head>
+
+
 <body>
 
-<div class="result-card text-center">
+<!-- NAVBAR -->
 
-<h2>🎉 Test Completed</h2>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-<div class="score">80%</div>
+<div class="container">
 
-<hr>
+<a class="navbar-brand fw-bold fs-3"
+href="index.html">
 
-<div class="row mt-4">
+🎓 MasterHub
+
+</a>
+
+<div>
+
+<a href="index.html"
+class="btn btn-light">
+
+Home
+
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- RESULT -->
+
+<div class="result-page">
+
+<div class="result-card">
+
+<h2>🏆 Test Completed!</h2>
+
+<p class="text-muted">
+आपने अपना टेस्ट पूरा कर लिया है।
+</p>
+
+
+<div class="score-circle">
+
+<h1 id="score">0</h1>
+
+<span>
+Score
+</span>
+
+</div>
+
+
+<div class="row">
 
 <div class="col-6">
-<h4>20</h4>
-<p>Total Questions</p>
+
+<div class="result-stat">
+
+<strong id="correct">0</strong>
+
+<br>
+
+सही उत्तर
+
 </div>
+
+</div>
+
 
 <div class="col-6">
-<h4>16</h4>
-<p>Correct Answers</p>
-</div>
 
-<div class="col-6 mt-3">
-<h4>4</h4>
-<p>Wrong Answers</p>
-</div>
+<div class="result-stat">
 
-<div class="col-6 mt-3">
-<h4>12 min</h4>
-<p>Time Taken</p>
+<strong id="wrong">0</strong>
+
+<br>
+
+गलत उत्तर
+
 </div>
 
 </div>
 
-<a href="index.html" class="btn btn-primary mt-4">🏠 Go to Home</a>
+</div>
 
-<a href="test.html" class="btn btn-success mt-4">🔄 Retry Test</a>
+
+<div class="result-stat">
+
+<strong>
+कुल प्रश्न:
+</strong>
+
+<span id="total">
+0
+</span>
 
 </div>
+
+
+<div class="result-stat">
+
+<strong>
+Percentage:
+</strong>
+
+<span id="percentage">
+0%
+</span>
+
+</div>
+
+
+<div class="mt-4">
+
+<a href="test.html"
+class="btn btn-primary btn-lg">
+
+🔄 Test Again
+
+</a>
+
+<a href="index.html"
+class="btn btn-outline-secondary btn-lg">
+
+🏠 Home
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const score =
+Number(localStorage.getItem("masterhubScore")) || 0;
+
+const total =
+Number(localStorage.getItem("masterhubTotal")) || 0;
+
+const wrong =
+total - score;
+
+const percentage =
+total > 0
+? ((score / total) * 100).toFixed(1)
+: 0;
+
+
+document.getElementById("score")
+.innerText =
+score + "/" + total;
+
+
+document.getElementById("correct")
+.innerText =
+score;
+
+
+document.getElementById("wrong")
+.innerText =
+wrong;
+
+
+document.getElementById("total")
+.innerText =
+total;
+
+
+document.getElementById("percentage")
+.innerText =
+percentage + "%";
+
+</script>
+
 
 </body>
-  </html>
+
+</html>
